@@ -17,14 +17,29 @@
     <![endif]-->
     <style>
       .section-container {
-        background-color: lightcoral;
-        border: 1px solid orangered;
+        background-color: green;
+        border-bottom: 2px solid black;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      #what {
+        background-image: url("img/bkg1.jpg");
+        margin-top: -20px;
+      }
+      
+      #when {
+        background-image: url("img/bkg1.jpg");
+      }
+      
+      #why {
+        background-image: url("img/bkg1.jpg");
       }
     </style>
   </head>
   
   <body>
-    <div class="navbar navbar-default">
+    <div id="barra-superior" class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-itens" aria-expanded="false">
@@ -76,58 +91,19 @@
     </div>
     
     <div class="container-fluid section-container" id="what">
-      <a href="#what-container"a></a>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
+      <a id="#what-container" name="#what-container" value="#what-container"></a>
       <p>Aleatory text</p>
       <p>Aleatory text</p>
       <p>Aleatory text</p>
     </div>
     <div class="container-fluid section-container" id="why">
-      <a href="#why-container"a></a>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
+      <a id="#why-container" name="#why-container" value="#why-container"></a>
       <p>Aleatory text</p>
       <p>Aleatory text</p>
       <p>Aleatory text</p>
     </div>
     <div class="container-fluid section-container" id="when">
-      <a href="#when-container"a></a>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
-      <p>Aleatory text</p>
+      <a id="#when-container" name="#when-container" value="#when-container"></a>
       <p>Aleatory text</p>
       <p>Aleatory text</p>
       <p>Aleatory text</p>
@@ -137,6 +113,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+      var documentHeight = $(document).height();
+      var topBarHeight = $("#barra-superior").height();
+      
+      $(".section-container").height(documentHeight);
+    </script>
   </body>
 
 </html>
